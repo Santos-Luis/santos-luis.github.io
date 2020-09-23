@@ -5,6 +5,5 @@ import "typeface-merriweather";
 import "./src/normalize.css";
 // custom CSS styles
 import "./src/style.css";
-
-// Highlighting for code blocks
-import "prismjs/themes/prism.css";
+// markedown code theme
+import "./src/markdown-code-theme.css";
