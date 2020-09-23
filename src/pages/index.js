@@ -1,13 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -20,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
           gatsby-config.js).
         </p>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -28,7 +27,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       {posts.map(post => {
-        const title = post.frontmatter.title || post.fields.slug
+        const title = post.frontmatter.title || post.fields.slug;
         return (
           <article
             key={post.fields.slug}
@@ -53,13 +52,13 @@ const BlogIndex = ({ data, location }) => {
               />
             </section>
           </article>
-        )
+        );
       })}
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -82,4 +81,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
