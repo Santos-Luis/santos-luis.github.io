@@ -1,7 +1,7 @@
 {
   "name": "santos-luis.github.io",
   "private": true,
-  "description": "Personal blog",
+  "description": "Personal tech blog",
   "version": "0.1.0",
   "author": "Luis Santos <luissh5@outlook.com>",
   "dependencies": {
