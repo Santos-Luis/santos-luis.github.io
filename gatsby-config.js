@@ -1,59 +1,73 @@
 module.exports = {
   siteMetadata: {
-    title: `santos-luis.github.io`,
+    title: 'santos-luis.github.io',
     author: {
-      name: `Luis Santos`,
+      name: 'Luis Santos',
+      summary: 'Summary here'
     },
-    description: `Personal tech blog`,
-    siteUrl: `https://santos-luis.github.io`,
+    social: {
+      github: 'https://github.com/Santos-Luis',
+      linkedin: 'https://www.linkedin.com/in/luisshenriques/',
+      instagram: 'https://www.instagram.com/luis.santos.5/'
+    },
+    description: 'Personal tech blog',
+    siteUrl: 'https://santos-luis.github.io',
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: 'blog',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: 'assets',
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 630,
             },
           },
-          `gatsby-remark-smartypants`,
+          'gatsby-remark-smartypants',
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Luis Santos Personal Tech Blog`,
-        short_name: `Personal tech blog`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        name: 'Luis Santos Personal Tech Blog',
+        short_name: 'Personal tech blog',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'content/assets/gatsby-icon.png',
       },
     },
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-sass',
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.svg$/
+        }
+      }
+    },
+    'gatsby-plugin-react-helmet',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    // 'gatsby-plugin-offline',
   ],
 };
