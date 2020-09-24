@@ -1,6 +1,11 @@
 .bio {
+  background-color: white;
   display: flex;
-  margin-bottom: 64px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px 0 rgba(31, 36, 50, 0.05);
+  padding: 30px;
+  width: 40%;
+  display: block;
 
   p {
     margin-bottom: 0;
@@ -8,8 +13,20 @@
 }
 
 .bio-avatar {
-  margin-right: 16px;
-  margin-bottom: 0;
+  margin-bottom: 40px;
   min-width: 50px;
   border-radius: 100%;
+  box-shadow: -2px -2px 7px 0px rgba(31, 36, 50, 0.1);
+}
+
+.author-name {
+  padding-bottom: 10px;
+}
+
+.author-description {
+  padding-bottom: 32px;
+}
+
+.icons-wrapper {
+  display: flex;
 }

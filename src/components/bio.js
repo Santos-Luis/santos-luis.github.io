@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
+import Icon from '@components/icon';
 import styles from './bio.module.scss';
 
 const Bio = () => {
@@ -8,7 +9,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50, quality: 95) {
+          fixed(width: 70, height: 70, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -20,17 +21,17 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            github
+            linkedin
+            instagram
           }
         }
       }
     }
   `);
 
-  // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author;
   const social = data.site.siteMetadata?.social;
-
   const avatar = data?.avatar?.childImageSharp?.fixed;
 
   return (
@@ -46,14 +47,22 @@ const Bio = () => {
         />
       )}
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {' '}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
+        <p className={styles.authorName}>
+          <strong>{author.name}</strong>
         </p>
       )}
+      {author?.summary && (
+        <p className={styles.authorDescription}>
+          {author?.summary}
+        </p>
+      )}
+      {social &&
+        <ul className={styles.iconsWrapper}>
+          {Object.keys(social).map(key => (
+            <Icon name={key} href={social[key]} />
+          ))}
+        </ul>
+      }
     </div>
   );
 };
