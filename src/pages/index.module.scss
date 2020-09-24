@@ -3,12 +3,16 @@
 }
 
 .posts-wrapper {
-  
+  background-color: var(--alabaster);
+  padding: 20px;
 }
 
 .post-list-item {
-  margin-bottom: 32px;
-  margin-top: 32px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px 0 rgba(31, 36, 50, 0.15);
+  padding: 15px;
+  margin-bottom: 20px;
 
   p {
     margin-bottom: 0;
