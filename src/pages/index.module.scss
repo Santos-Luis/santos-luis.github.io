@@ -1,0 +1,27 @@
+.index-wrapper {
+  display: flex;
+}
+
+.posts-wrapper {
+  
+}
+
+.post-list-item {
+  margin-bottom: 32px;
+  margin-top: 32px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  header {
+    margin-bottom: 16px;
+  }
+}

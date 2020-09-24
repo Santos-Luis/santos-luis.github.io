@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
+import styles from './bio.module.scss';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -33,12 +34,12 @@ const Bio = () => {
   const avatar = data?.avatar?.childImageSharp?.fixed;
 
   return (
-    <div className="bio">
+    <div className={styles.bio}>
       {avatar && (
         <Image
           fixed={avatar}
           alt={author?.name || ''}
-          className="bio-avatar"
+          className={styles.bioAvatar}
           imgStyle={{
             borderRadius: '50%',
           }}
