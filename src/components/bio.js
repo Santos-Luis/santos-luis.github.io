@@ -59,7 +59,7 @@ const Bio = () => {
       {social &&
         <ul className={styles.iconsWrapper}>
           {Object.keys(social).map(key => (
-            <Icon name={key} href={social[key]} />
+            <Icon name={key} href={social[key]} key={key} />
           ))}
         </ul>
       }

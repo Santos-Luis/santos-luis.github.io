@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import SantosLuis from '@assets/santos-luis.svg';
 import styles from './layout.module.scss';
 
 const Layout = ({ location, title, children }) => {
@@ -7,13 +8,7 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath;
   let header;
 
-  if (isRootPath) {
-    header = (
-      <h1 className={styles.mainHeading}>
-        <Link to="/">{title}</Link>
-      </h1>
-    );
-  } else {
+  if (!isRootPath) {
     header = (
       <Link className={styles.headerLinkHome} to="/">
         {title}
@@ -26,9 +21,9 @@ const Layout = ({ location, title, children }) => {
       <header className={styles.globalHeader}>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        {new Date().getFullYear()}, Built by
+        {' '}
+        <SantosLuis className={styles.globalWrapper__logo} />
       </footer>
     </div>
   );
