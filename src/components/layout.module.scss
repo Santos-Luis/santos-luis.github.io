@@ -11,9 +11,16 @@
 }
 
 .global-wrapper {
+  height: 100vh;
   background-color: var(--alabaster);
   padding: 0 5%;
   margin: 0;
+
+  &__logo {
+    height: 50px;
+    width: 50px;
+    vertical-align: bottom;
+  }
 }
 
 .global-header {
