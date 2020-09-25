@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Bio from '../components/bio';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Bio from '@components/bio';
+import Layout from '@components/layout';
+import SEO from '@components/seo';
+import styles from './blog-post.module.scss';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
@@ -16,7 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="blog-post"
+        className={styles.blogPost}
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -33,7 +34,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className={styles.blogPostNav}>
         <ul
           style={{
             display: 'flex',

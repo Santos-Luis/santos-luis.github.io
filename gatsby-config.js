@@ -38,6 +38,7 @@ module.exports = {
               maxWidth: 630,
             },
           },
+          'gatsby-remark-prismjs',
           'gatsby-remark-smartypants',
         ],
       },
@@ -58,7 +59,7 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /\.svg$/
