@@ -51,8 +51,6 @@ module.exports = {
         name: 'Luis Santos Personal Tech Blog',
         short_name: 'Personal tech blog',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'content/assets/icon.png',
       },
@@ -67,6 +65,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-dark-mode',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
