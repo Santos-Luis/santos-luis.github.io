@@ -13,7 +13,9 @@ const Layout = ({ location, title, children }) => {
         <Link className={styles.headerLinkHome} to="/">
           <SantosLuisLogo className={styles.headerLogo} />
         </Link>
-        {title}
+        <span className={styles.headerBlogName}>
+          {title}
+        </span>
       </React.Fragment>
   );
 

@@ -14,6 +14,10 @@
   fill: var(--river-bed);
 }
 
+.header-blog-name {
+  margin: auto 0;
+}
+
 .global-wrapper {
   height: 100%;
   background-color: var(--alabaster);
@@ -45,4 +49,8 @@
 .non-root-main-class-name,
 .non-root-footer-class-name {
   max-width: 70%;
+}
+
+.non-root-main-class-name {
+  margin: 0 20%;
 }
