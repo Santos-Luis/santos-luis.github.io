@@ -2,17 +2,17 @@
   padding-top: 100px;
 
   h1 {
-    margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+    margin: 0 0 16px 0;
   }
 
   p {
-    font-size: var(--fontSize-2);
+    font-size: 1.2rem;
     font-family: var(--font-heading);
   }
 }
 
 .blog-post-nav {
   ul {
-    margin: var(--spacing-0);
+    margin: 0;
   }
 }
