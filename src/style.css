@@ -20,10 +20,31 @@
   --color-accent: #d1dce5;
   --color-background: #fafafa;
   --color-logo: #48555e;
+  --color-background-cards: #ffffff;
+  --color-icon-border: #d1dce5;
+  --color-icon-fill: #000000;
+  --box-shadow-header: 0 4px 6px 0 rgba(31, 36, 50, 0.05);
+  --box-shadow-bio: 0 4px 6px 0 rgba(31, 36, 50, 0.05);
+  --box-shadow-bio-avatar: -2px -2px 7px 0px rgba(31, 36, 50, 0.1);
+  --box-shadow-cards: -4px 4px 5px 0 rgba(31, 36, 50, 0.1);
 }
 
 .dark {
-  --color-background: darkslategray;
+  --color-primary: #005b99;
+  --color-text: rgba(250, 250, 250, 0.8);
+  --color-text-light: rgba(250, 250, 250, 0.6);
+  --color-heading: #1a202c;
+  --color-heading-black: black;
+  --color-accent: #d1dce5;
+  --color-background: #000000;
+  --color-logo: #666666;
+  --color-background-cards: #2a2b2d;
+  --color-icon-border: rgba(250, 250, 250, 0.4);
+  --color-icon-fill: rgba(250, 250, 250, 0.8);
+  --box-shadow-header: -4px 4px 5px 0 rgba(100, 100, 100, 0.25);
+  --box-shadow-bio: -4px 4px 5px 0 rgba(100, 100, 100, 0.25);
+  --box-shadow-bio-avatar: -2px -2px 7px 0px rgba(100, 100, 100, 0.9);
+  --box-shadow-cards: -4px 4px 5px 0 rgba(100, 100, 100, 0.3);
 }
 
 /* HTML elements */
