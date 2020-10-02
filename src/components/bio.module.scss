@@ -1,8 +1,8 @@
 .bio {
-  background-color: white;
+  background-color: var(--color-background-cards);
   display: flex;
   border-radius: 4px;
-  box-shadow: 0 4px 6px 0 rgba(31, 36, 50, 0.05);
+  box-shadow: var(--box-shadow-bio);
   padding: 30px;
   width: 40%;
   display: block;
@@ -16,7 +16,7 @@
   margin-bottom: 40px;
   min-width: 50px;
   border-radius: 100%;
-  box-shadow: -2px -2px 7px 0px rgba(31, 36, 50, 0.1);
+  box-shadow: var(--box-shadow-bio-avatar);
 }
 
 .author-name {

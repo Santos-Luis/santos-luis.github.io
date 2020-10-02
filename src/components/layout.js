@@ -1,23 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import SantosLuisLogo from '@assets/santos-luis-logo.svg';
+import Header from '@components/header';
 import styles from './layout.module.scss';
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location.pathname === rootPath;
   let mainClassName, footerClassName;
-
-  const header = (
-      <React.Fragment>
-        <Link className={styles.headerLinkHome} to="/">
-          <SantosLuisLogo className={styles.headerLogo} />
-        </Link>
-        <span className={styles.headerBlogName}>
-          {title}
-        </span>
-      </React.Fragment>
-  );
 
   if (!isRootPath) {
     mainClassName = styles.nonRootMainClassName;
@@ -26,7 +14,9 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className={styles.globalWrapper} data-is-root-path={isRootPath}>
-      <header className={styles.globalHeader}>{header}</header>
+      <header className={styles.globalHeader}>
+        <Header />
+      </header>
       <main className={mainClassName}>{children}</main>
       <footer className={footerClassName}>
         {new Date().getFullYear()}
