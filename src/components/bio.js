@@ -4,7 +4,7 @@ import Image from 'gatsby-image';
 import Icon from '@components/icon';
 import styles from './bio.module.scss';
 
-const Bio = () => {
+const Bio = ({ rootPath }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
@@ -34,20 +34,32 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social;
   const avatar = data?.avatar?.childImageSharp?.fixed;
 
+  const bioStyle = rootPath ? 'bio' : 'nonRootBio';
+  const socialHtml = (
+    <ul className={styles[`${bioStyle}__iconsWrapper`]}>
+      {Object.keys(social).map(key => (
+        <Icon name={key} href={social[key]} key={key} />
+      ))}
+    </ul>
+  );
+
   return (
-    <div className={styles.bio}>
-      {avatar && (
-        <Image
-          fixed={avatar}
-          alt={author?.name || ''}
-          className={styles.bioAvatar}
-          imgStyle={{
-            borderRadius: '50%',
-          }}
-        />
-      )}
+    <div className={styles[`${bioStyle}`]}>
+      <div className={styles[`${bioStyle}__avatarWrapper`]}>
+        {avatar && (
+          <Image
+            fixed={avatar}
+            alt={author?.name || ''}
+            className={styles[`${bioStyle}__avatar`]}
+            imgStyle={{
+              borderRadius: '50%',
+            }}
+          />
+        )}
+        {social && !rootPath && socialHtml}
+      </div>
       {author?.name && (
-        <p className={styles.authorName}>
+        <p className={styles[`${bioStyle}__authorName`]}>
           <strong>{author.name}</strong>
         </p>
       )}
@@ -56,16 +68,10 @@ const Bio = () => {
           dangerouslySetInnerHTML={{
             __html: author.summary
           }}
-          className={styles.authorDescription}
+          className={styles[`${bioStyle}__authorDescription`]}
         />
       )}
-      {social &&
-        <ul className={styles.iconsWrapper}>
-          {Object.keys(social).map(key => (
-            <Icon name={key} href={social[key]} key={key} />
-          ))}
-        </ul>
-      }
+      {social && rootPath && socialHtml}
     </div>
   );
 };

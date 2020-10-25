@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         <hr />
         <footer>
-          <Bio />
+          <Bio rootPath={false} />
         </footer>
       </article>
       <nav className={styles.blogPostNav}>
