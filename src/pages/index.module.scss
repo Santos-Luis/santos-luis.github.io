@@ -3,6 +3,20 @@
   padding-top: 100px;
 }
 
+.cardsHeader {
+  display: flex;
+  justify-content: space-between;
+
+  small {
+    margin: auto 0;
+  }
+}
+
+.technologies {
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+
 .posts-wrapper {
   width: 100%;
   padding-left: 20px;
@@ -27,6 +41,6 @@
   }
 
   header {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 }
