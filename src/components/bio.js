@@ -52,9 +52,12 @@ const Bio = () => {
         </p>
       )}
       {author?.summary && (
-        <p className={styles.authorDescription}>
-          {author?.summary}
-        </p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: author.summary
+          }}
+          className={styles.authorDescription}
+        />
       )}
       {social &&
         <ul className={styles.iconsWrapper}>

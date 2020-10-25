@@ -3,7 +3,13 @@ module.exports = {
     title: 'santos-luis.github.io',
     author: {
       name: 'Luis Santos',
-      summary: 'Summary here'
+      summary: `Software Engineer working at <a href="https://www.uniplaces.com/">Uniplaces</a>.
+      Currently I am doing backend projects in <b>Symfony</b> (PHP) and <b>NodeJS</b> and sometimes in <b>Go</b>.
+      I am also doing some frontend projects using mostly <b>ReactJS</b> and <b>GatsbyJS</b> but also <b>EmberJS</b>.
+      <br>
+      <br>
+      Besides writing the services code I am often involved in the creation of the infrastructure and deployment process.
+      Most of my experience in this area is connected to <b>AWS</b> services.`
     },
     social: {
       github: 'https://github.com/Santos-Luis',
