@@ -74,6 +74,7 @@ exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
       alias: {
         '@components': path.resolve(__dirname, 'src/components'),
         '@assets': path.resolve(__dirname, 'content/assets'),
+        '@utils': path.resolve(__dirname, 'src/utils'),
       },
     },
   });

@@ -1,3 +1,5 @@
+@import "@assets/styles/_functions.scss";
+
 .bio {
   background-color: var(--color-background-cards);
   display: flex;
@@ -30,6 +32,28 @@
     display: flex;
     margin: 0;
   }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &__avatar-wrapper, &__read-more-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__avatar {
+      margin-bottom: 0;
+    }
+
+    &__icons-wrapper {
+      margin: auto 0;
+    }
+
+    &__author-name, &__read-more {
+      padding: 20px 0;
+    }
+  } 
 }
 
 .non-root-bio {

@@ -1,6 +1,12 @@
+@import "@assets/styles/_functions.scss";
+
 .index-wrapper {
   display: flex;
   padding-top: 100px;
+
+ @include mobile {
+   display: block;
+ } 
 }
 
 .cardsHeader {
