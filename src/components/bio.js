@@ -45,7 +45,14 @@ const Bio = ({ rootPath }) => {
     </ul>
   );
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(!rootPath);
+  const [dropDownMessage, setDropDownMessage]  = useState('Read more');
+
+  const changeDropDownMessage = () => {
+    console.log('i am here');
+    const message = show ? 'Read more' : 'Read less';
+    setDropDownMessage(message);
+  }
 
   const { isMobile } = useDeviceDetect();
   if (isMobile) {
@@ -70,13 +77,18 @@ const Bio = ({ rootPath }) => {
               <strong>{author.name}</strong>
             </p>
           )}
-          <button
-            className={styles[`${bioStyle}__readMore`]}
-            aria-label="Read more"
-            onClick={() => {setShow(!show)}}
-          >
-            <span>Read more</span>
-          </button>
+          {rootPath && (
+            <button
+              className={styles[`${bioStyle}__readMore`]}
+              aria-label="Read more"
+              onClick={() => {
+                setShow(!show);
+                changeDropDownMessage();
+              }}
+            >
+              <span>{dropDownMessage}</span>
+            </button>
+          )}
         </div>
         <Fade top collapse when={show} duration={1000} distance="20px" >
           {author?.summary && (
