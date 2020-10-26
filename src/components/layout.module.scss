@@ -1,3 +1,5 @@
+@import "@assets/styles/_functions.scss";
+
 .main-heading {
   font-size: 48px;
   margin: 0;
@@ -16,6 +18,10 @@
     height: 50px;
     width: 50px;
     vertical-align: bottom;
+  }
+
+  @include mobile {
+    padding: 0 2%;
   }
 }
 
