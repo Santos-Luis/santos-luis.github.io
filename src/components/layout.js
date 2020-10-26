@@ -5,20 +5,15 @@ import styles from './layout.module.scss';
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location.pathname === rootPath;
-  let mainClassName, footerClassName;
-
-  if (!isRootPath) {
-    mainClassName = styles.nonRootMainClassName;
-    footerClassName = styles.nonRootFooterClassName;
-  }
+  const mainClass = isRootPath ? '' : styles.nonRootMainClass;
 
   return (
     <div className={styles.globalWrapper} data-is-root-path={isRootPath}>
       <header className={styles.globalHeader}>
         <Header />
       </header>
-      <main className={mainClassName}>{children}</main>
-      <footer className={footerClassName}>
+      <main className={mainClass}>{children}</main>
+      <footer>
         {new Date().getFullYear()}
       </footer>
     </div>

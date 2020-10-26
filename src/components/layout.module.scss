@@ -42,10 +42,15 @@
   top: 0;
 }
 
-.non-root-main-class-name {
+.non-root-main-class {
   margin: 120px 10% 0;
   padding: 0 10%;
   background-color: var(--color-background-cards);
   border-radius: 4px;
   box-shadow: var(--box-shadow-bio-post);
+
+  @include mobile {
+    margin: 120px 2% 0;
+    padding: 0 5%;
+  }
 }

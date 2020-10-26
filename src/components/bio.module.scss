@@ -32,8 +32,38 @@
     display: flex;
     margin: 0;
   }
+}
 
-  @include mobile {
+.non-root-bio {
+  background-color: var(--color-background-cards);
+  padding: 30px 0 30px;
+
+  &__avatar-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__avatar {
+    margin-bottom: 20px;
+    min-width: 50px;
+    border-radius: 100%;
+    box-shadow: var(--box-shadow-bio-avatar);
+  }
+
+  &__icons-wrapper {
+    display: flex;
+    margin-top: auto;
+
+    li {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .bio, .non-root-bio {
     width: 100%;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -72,33 +102,5 @@
     &__author-description {
       padding: 20px 0;
     }
-  } 
-}
-
-.non-root-bio {
-  background-color: var(--color-background-cards);
-  padding: 30px 0 30px;
-
-  &__avatar-wrapper {
-    display: flex;
-    justify-content: space-between;
   }
-
-  &__avatar {
-    margin-bottom: 20px;
-    min-width: 50px;
-    border-radius: 100%;
-    box-shadow: var(--box-shadow-bio-avatar);
-  }
-
-  &__icons-wrapper {
-    display: flex;
-    margin-top: auto;
-
-    li {
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
+} 
