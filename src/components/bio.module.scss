@@ -36,10 +36,19 @@
   @include mobile {
     width: 100%;
     margin-bottom: 20px;
+    padding-bottom: 10px;
 
     &__avatar-wrapper, &__read-more-wrapper {
       display: flex;
       justify-content: space-between;
+    }
+
+    &__read-more {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: var(--color-text);
+      text-decoration: underline;
     }
 
     &__avatar {
@@ -48,9 +57,19 @@
 
     &__icons-wrapper {
       margin: auto 0;
+
+      li {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
     &__author-name, &__read-more {
+      margin: 20px 0;
+    }
+
+    &__author-description {
       padding: 20px 0;
     }
   } 

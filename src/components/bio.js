@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
+import Fade from 'react-reveal/Fade';
 import Icon from '@components/icon';
 import { useDeviceDetect } from '@utils/deviceDetect';
 import styles from './bio.module.scss';
@@ -44,6 +45,7 @@ const Bio = ({ rootPath }) => {
     </ul>
   );
 
+  const [show, setShow] = useState(false);
 
   const { isMobile } = useDeviceDetect();
   if (isMobile) {
@@ -68,18 +70,24 @@ const Bio = ({ rootPath }) => {
               <strong>{author.name}</strong>
             </p>
           )}
-          <span className={styles[`${bioStyle}__readMore`]}>
-            Read more
-          </span>
+          <button
+            className={styles[`${bioStyle}__readMore`]}
+            aria-label="Read more"
+            onClick={() => {setShow(!show)}}
+          >
+            <span>Read more</span>
+          </button>
         </div>
-        {author?.summary && (
-          <p
-            dangerouslySetInnerHTML={{
-              __html: author.summary
-            }}
-            className={styles[`${bioStyle}__authorDescription`]}
-          />
-        )}
+        <Fade top collapse when={show} duration={1000} distance="20px" >
+          {author?.summary && (
+            <p
+              dangerouslySetInnerHTML={{
+                __html: author.summary
+              }}
+              className={styles[`${bioStyle}__authorDescription`]}
+            />
+          )}
+        </Fade>
       </div>
     )
   }
