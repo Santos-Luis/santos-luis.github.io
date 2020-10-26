@@ -13,8 +13,11 @@ const Layout = ({ location, children }) => {
         <Header />
       </header>
       <main className={mainClass}>{children}</main>
-      <footer>
-        {new Date().getFullYear()}
+      <footer className={styles.footer}>
+        <p>
+          Powered by <a href="https://www.gatsbyjs.com/">Gatsby</a>.<br/>
+          You can find the blog source code <a href="https://github.com/Santos-Luis/santos-luis.github.io">here</a>.
+        </p>
       </footer>
     </div>
   );
