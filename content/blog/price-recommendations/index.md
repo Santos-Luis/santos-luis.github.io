@@ -21,7 +21,9 @@ The fact that we had a table filtered by city makes our service much faster, sin
 
 In order to "transform" the lambda into a REST API I am using the API gateway, taking also advantage of the [edge optimization](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html) and the the cache mechanism that API gateway provides us.
 
-It's worth to mention that to not only help me define all the infrastructure but also to allow me to quickly deploy the service, I am using the serverless framework, where you only need to write a configuration and deploy the service.
+It's worth to mention that, in order to help me define all the infrastructure but also to allow me to quickly deploy the service, I am using the serverless framework, where you only need to write a configuration file and deploy the service.
+
+In conclusion, the service is called through an API endpoint that receives the city code, extra parameters (optional - e.g., number of bedrooms) and returns a price recommendation. To get this price value, the system only needs to apply some logic on the arguments passed and query the DB table. This DB table is periodically updated by a python scraper that fetches the information from a global database of reported consumer prices.
 
 The architecture diagram can be illustrated as follows:
 
