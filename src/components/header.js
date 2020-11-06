@@ -8,7 +8,7 @@ import styles from './header.module.scss';
 
 const Header = () => (
   <React.Fragment>
-    <Link to="/">
+    <Link to="/" aria-label="homepage">
       <SantosLuisLogo className={styles.headerLogo} />
     </Link>
     <ThemeToggler>
