@@ -12,7 +12,7 @@ const mapping = {
 
 const Icon = ({ name, href }) => (
   <li className={styles.icon}>
-    <a href={href} rel="noopener noreferrer" target="_blank">
+    <a aria-label={name} href={href} rel="noopener noreferrer" target="_blank">
       {mapping[name]}
     </a>
   </li>

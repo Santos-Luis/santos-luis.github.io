@@ -3,7 +3,7 @@ module.exports = {
     title: 'santos-luis.github.io',
     author: {
       name: 'Luis Santos',
-      summary: `Software Engineer working at <a href="https://www.uniplaces.com/">Uniplaces</a>.
+      summary: `Software Engineer working at <a aria-label="Uniplaces" href="https://www.uniplaces.com/">Uniplaces</a>.
       Currently I am doing backend projects in <b>Symfony</b> (PHP) and <b>NodeJS</b> and sometimes in <b>Go</b>.
       I am also doing some frontend projects using mostly <b>ReactJS</b> and <b>GatsbyJS</b> but also <b>EmberJS</b>.
       <br>
