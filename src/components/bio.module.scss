@@ -26,6 +26,10 @@
   
   &__author-description {
     padding-bottom: 32px;
+
+    a {
+      color: var(--color-text);
+    }
   }
   
   &__icons-wrapper {
