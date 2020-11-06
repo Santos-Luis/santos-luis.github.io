@@ -45,11 +45,10 @@ const Bio = ({ rootPath }) => {
     </ul>
   );
 
-  const [show, setShow] = useState(!rootPath);
+  const [show, setShow] = useState(false);
   const [dropDownMessage, setDropDownMessage]  = useState('Read more');
 
   const changeDropDownMessage = () => {
-    console.log('i am here');
     const message = show ? 'Read more' : 'Read less';
     setDropDownMessage(message);
   }
