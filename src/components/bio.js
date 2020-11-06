@@ -90,16 +90,24 @@ const Bio = ({ rootPath }) => {
             </button>
           )}
         </div>
-        <Fade top collapse when={show} duration={1000} distance="20px" >
-          {author?.summary && (
+        {author?.summary && rootPath && (
+          <Fade top collapse when={show} duration={1000} distance="20px" >
             <p
               dangerouslySetInnerHTML={{
                 __html: author.summary
               }}
               className={styles[`${bioStyle}__authorDescription`]}
             />
-          )}
-        </Fade>
+          </Fade>
+        )}
+        {author?.summary && !rootPath && (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: author.summary
+            }}
+            className={styles[`${bioStyle}__authorDescription`]}
+          />
+        )}
       </div>
     )
   }
