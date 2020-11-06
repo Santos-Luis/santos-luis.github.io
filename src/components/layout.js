@@ -16,7 +16,7 @@ const Layout = ({ location, children }) => {
       <footer className={styles.footer}>
         <p>
           Powered by <a href="https://www.gatsbyjs.com/">Gatsby</a>.<br/>
-          You can find the blog source code <a href="https://github.com/Santos-Luis/santos-luis.github.io">here</a>.
+          Here you can find the <a href="https://github.com/Santos-Luis/santos-luis.github.io">blog source code</a>.
         </p>
       </footer>
     </div>
