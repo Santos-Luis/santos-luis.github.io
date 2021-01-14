@@ -9,7 +9,7 @@ module.exports = {
       <br>
       <br>
       Besides writing the services code I am often involved in the creation of the infrastructure and deployment process.
-      Most of my experience in this area is connected to <b>AWS</b> services.`
+      Most of my experience in this area is connected to <b>AWS</b> services and <b>Github Actions</b>.`
     },
     social: {
       github: 'https://github.com/Santos-Luis',
