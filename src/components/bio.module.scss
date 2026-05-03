@@ -2,7 +2,6 @@
 
 .bio {
   background-color: var(--color-background-cards);
-  display: flex;
   border-radius: 4px;
   box-shadow: var(--box-shadow-bio);
   padding: 30px;
@@ -23,7 +22,7 @@
   &__author-name {
     padding-bottom: 10px;
   }
-  
+
   &__author-description {
     padding-bottom: 32px;
 
@@ -31,7 +30,7 @@
       color: var(--color-text);
     }
   }
-  
+
   &__icons-wrapper {
     display: flex;
     margin: 0;
@@ -67,12 +66,14 @@
 }
 
 @include mobile {
-  .bio, .non-root-bio {
+  .bio,
+  .non-root-bio {
     width: 100%;
     margin-bottom: 20px;
     padding-bottom: 10px;
 
-    &__avatar-wrapper, &__read-more-wrapper {
+    &__avatar-wrapper,
+    &__read-more-wrapper {
       display: flex;
       justify-content: space-between;
     }
@@ -99,7 +100,8 @@
       }
     }
 
-    &__author-name, &__read-more {
+    &__author-name,
+    &__read-more {
       margin: 20px 0;
     }
 
@@ -107,4 +109,4 @@
       padding: 20px 0;
     }
   }
-} 
+}
