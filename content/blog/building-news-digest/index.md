@@ -31,7 +31,7 @@ With Claude, the same idea can be expressed through `claude --print`, piping or 
 
 ## Scheduling with Taskdeck
 
-[Taskdeck](https://github.com/Santos-Luis/taskdeck) is the local-first scheduler I use to run shell-command jobs. It stores jobs in SQLite, runs them from a Fastify process, records run history, and provides a React UI for managing the jobs.
+[Taskdeck](https://github.com/luissh-5/taskdeck) is the local-first scheduler I use to run shell-command jobs. It stores jobs in SQLite, runs them from a Fastify process, records run history, and provides a React UI for managing the jobs.
 
 That makes it a good fit for this workflow. Taskdeck can own the daily schedule, execute the chosen agent command, and leave the output in `src/digests/`. From there, the static site is just a normal Astro build and GitHub Pages deployment.
 
